@@ -1,8 +1,10 @@
-# Day 4 - Income Calculator
+# Day 5 - Income Calculator with user input
 
-gross_hourly = 6.96
-hours_per_month = 160
-tax_rate = 0.32
+gross_hourly = float(input("Enter gross hourly rate: "))
+hours_per_month = float(input("Enter hours per month: "))
+tax_rate_percent= float(input("Enter tax rate percentage: "))
+
+tax_rate = tax_rate_percent / 100
 
 gross_monthly = gross_hourly * hours_per_month
 tax_amount = gross_monthly * tax_rate
