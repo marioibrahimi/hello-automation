@@ -1,4 +1,13 @@
-# Day 5 - Income Calculator with user input
+# Day 11 - Income Calculator with functions
+
+def calculate_gros_monthly(gross_hourly, hours_per_month):
+    return gross_hourly * hours_per_month
+
+def calculate_tax_amount(gross_monthly, tax_rate_percentage):
+    tax_rate = tax_rate_percentage / 100
+
+def calculate_net_monthly(gross_monthly, tax_amount):
+    return gross_monthly - tax_amount
 
 gross_hourly = float(input("Enter gross hourly rate: "))
 hours_per_month = float(input("Enter hours per month: "))
