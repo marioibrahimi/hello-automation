@@ -2,7 +2,7 @@
 
 ## What this project is
 
-A learning project for Python, Terminal, Git, and basic automation scripts. Week 1 covered setup and Python basics. Week 2 covered conditionals, comparisons, boolean logic, functions, debugging, and a small discount calculator.
+A learning project for Python, Terminal, Git, and basic automation scripts. Week 1 covered setup and Python basics. Week 2 covered conditionals, comparisons, boolean logic, functions, debugging, and a small discount calculator. Week 3 covered loops, lists, dictionaries, nested dictionaries, and the first mini city cost calculator.
 
 ## What I learned in Week 1
 
@@ -20,8 +20,21 @@ A learning project for Python, Terminal, Git, and basic automation scripts. Week
 - Boolean logic: `and`, `or`, `not`
 - Functions: `def`, parameters, and `return`
 - Debugging: reading Python error messages, finding the file and line number, fixing one bug at a time
-- f-strings for money formatting, for example `€{final_price:.2f}`
+- f-strings for money formatting, for example `${final_price:.2f}`
 - Git cleanup workflow: `git status`, `git add .`, `git commit`, `git push`
+
+## What I learned in Week 3
+
+- For loops: repeat through a known group or list.
+- While loops: repeat while a condition stays true.
+- Lists: store multiple values in one container.
+- Dictionaries: store values using labels/keys, like drawers with names.
+- Nested dictionaries: dictionaries inside dictionaries, like drawers inside drawers.
+- input(): asks the user for a value in the Terminal.
+- .strip(): removes spaces before and after user input.
+- .title(): converts input like `bucharest` into `Bucharest` so it matches the dictionary key.
+- if selected_city in cities: checks if the selected city exists as a key before opening the dictionary.
+- else: runs when the city is not found.
 
 ## Scripts
 
@@ -41,6 +54,15 @@ A learning project for Python, Terminal, Git, and basic automation scripts. Week
 - `error_log.md` — records bugs, mistakes, error messages, and how I fixed them.
 - `discount_calculator.py` — calculates discount amount, final price, and discount category.
 
+### Week 3
+
+- `city_list.py` — loops through a list of cities and prints them.
+- `savings_countdown.py` — calculates how many months are needed to reach a savings target.
+- `expenses_list.py` — stores expenses in a list and calculates the total.
+- `city_costs.py` — stores city cost data in a dictionary.
+- `nested_city_costs.py` — stores multiple cities using nested dictionaries and calculates totals.
+- `city_monthly_calculator.py` — asks the user for a city and returns the estimated monthly cost.
+
 ## Commands I practiced
 
 - uv run python file.py
@@ -48,6 +70,7 @@ A learning project for Python, Terminal, Git, and basic automation scripts. Week
 - git add .
 - git commit -m "message"
 - git push
+- git log --oneline -5
 - git log --oneline --max-count=10
 
 ## How to run scripts
@@ -58,6 +81,28 @@ uv run python budget_status.py
 uv run python rent_check.py
 uv run python move_decision.py
 uv run python discount_calculator.py
+uv run python city_list.py
+uv run python savings_countdown.py
+uv run python expenses_list.py
+uv run python city_costs.py
+uv run python nested_city_costs.py
+uv run python city_monthly_calculator.py
+```
+
+## Example output
+
+Example from `city_monthly_calculator.py`:
+
+```bash
+Which city do you want to check? bucharest
+
+City cost estimate
+City: Bucharest
+Rent: $500
+Food: $300
+Transport: $50
+Internet: $10
+Total: $860
 ```
 
 ## What confused me
@@ -68,7 +113,10 @@ uv run python discount_calculator.py
 - Exact spelling of commands, file names, and variable names matters.
 - Why we use float(input()) for calculator math.
 - Difference between untracked and unstaged in Git.
+- A dictionary key must match exactly unless I clean the input first.
+- `else` cannot exist alone; it must belong to an `if`.
+- Indentation matters because Python uses it to know what belongs inside `if`, `else`, loops, and other blocks.
 
 ## Next step
 
-Day 15: Python loops with for loops and range().
+Day 22: Functions deeper — split the city monthly calculator into smaller reusable functions.
