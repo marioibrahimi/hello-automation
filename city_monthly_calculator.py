@@ -21,25 +21,31 @@ cities = {
     },
 }
 
-selected_city = input("Which city do you want to check? ").strip().title()
-
-if selected_city in cities:
-    city_costs = cities[selected_city]
-
-    total = (
+def calculate_total(city_costs):
+    return (
         city_costs["rent"]
         + city_costs["food"]
-        + city_costs["transport"]
-        + city_costs["internet"]
+        + city_costs ["transport"]
+        + city_costs ["internet"]
     )
 
+def print_report(city_name, city_costs, total):
     print("City cost estimate")
-    print(f"City: {selected_city}")
+    print(f"City: {city_name}")
     print(f"Rent: ${city_costs['rent']}")
     print(f"Food: ${city_costs['food']}")
     print(f"Transport: ${city_costs['transport']}")
     print(f"Internet: ${city_costs['internet']}")
     print(f"Total: ${total}")
+
+selected_city = input("Which city do you want to check? ").strip().title()
+
+if selected_city in cities:
+    city_costs = cities[selected_city]
+
+    total = calculate_total(city_costs)
+
+    print_report(selected_city, city_costs, total)
 else:
     print("City not found.")
     print("Available cities: Chernivtsi, Bucharest, Tbilisi")
