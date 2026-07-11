@@ -15,3 +15,7 @@ def print_report(city_name, city_costs, total):
     print(f"Transport: ${city_costs['transport']}")
     print(f"Internet: ${city_costs['internet']}")
     print(f"Total: ${total}")
+
+    
+def is_valid_city(city_name, cities):
+        return city_name in cities

@@ -1,4 +1,4 @@
-from calculations import calculate_total, print_report
+from calculations import calculate_total, print_report, is_valid_city
 
 cities = {
     "Chernivtsi": {
@@ -25,7 +25,7 @@ cities = {
 
 selected_city = input("Which city do you want to check? ").strip().title()
 
-if selected_city in cities:
+if is_valid_city(selected_city, cities):
     city_costs = cities[selected_city]
 
     total = calculate_total(city_costs)
