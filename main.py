@@ -33,4 +33,4 @@ if is_valid_city(selected_city, cities):
     print_report(selected_city, city_costs, total)
 else:
     print("City not found.")
-    print("Availale cities: Chernivtsi, Bucharest, Tbilisi")
+    print("Available cities: Chernivtsi, Bucharest, Tbilisi")
